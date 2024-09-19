@@ -1,0 +1,21 @@
+{{define "enter"}}
+
+{{template "header"}}
+
+  <main class="px-3">
+    <h1>Вход</h1>
+    <br>Для Входа введите имя пользователя и день рождения</br>
+    <form action="/enter_user/" metohod="post">
+      <input type="text" name="name" id="name" placeholder="Введите имя пользователя" class="form-control"><br>
+      <input type="text" name="birthday" id="birthday" placeholder="Введите день рождения пользователя: ГГГГ-ММ-ДД" class="form-control"><br>
+      
+      <button class="btn btn-warning">Вход</button>
+    </form>
+    
+
+ 
+  </main>
+  
+  {{template "footer"}}
+  
+  {{end}}

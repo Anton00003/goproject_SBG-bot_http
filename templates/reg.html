@@ -1,0 +1,21 @@
+{{define "reg"}}
+
+{{template "header"}}
+
+  <main class="px-3">
+    <h1>Регистрация</h1>
+    <br>Для Регистриции введите имя пользователя и день рождения</br>
+    <form action="/save_user/" metohod="post">
+      <input type="text" name="name" id="name" placeholder="Введите имя пользователя" class="form-control"><br>
+      <input type="text" name="birthday" id="birthday" placeholder="Введите день рождения пользователя: ГГГГ-ММ-ДД" class="form-control"><br>
+      <textarea name="about" id="about" placeholder="Введите информацию о пользователе" class="form-control"></textarea><br>
+      <button class="btn btn-warning">Добавить пользователя</button>
+    </form>
+    
+
+ 
+  </main>
+  
+  {{template "footer"}}
+  
+  {{end}}

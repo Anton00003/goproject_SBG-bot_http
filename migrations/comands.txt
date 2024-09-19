@@ -1,0 +1,12 @@
+
+MIGRATION_DIR=./migrations
+MIGGRATION_DNS="host=localhost port=5431 user=db password=db dbname = db sslmode=disable"
+
+docker compose up -d
+goose create table1 sql
+
+goose -dir MIGRATION_DIR postgres MIGGRATION_DNS up -v
+goose -dir MIGRATION_DIR postgres MIGGRATION_DNS down -v
+
+goose -dir ./migrations postgres "host=localhost port=5431 user=db password=db dbname = db sslmode=disable" up -v
+goose -dir ./migrations postgres "host=localhost port=5431 user=db password=db dbname = db sslmode=disable" down -v
